@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">
 </head>
 <body>
     <div class="container">
@@ -27,26 +28,31 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <h3 for="service" class="label">How was your service?</h3>
+                        <label for="service" class="label">Choose tip</label>
                         <div class="radio-buttons">
-                            <input type="radio" id="1" name="round-number" value="1" checked>
-                            <label for="1">$1</label>
+                            <input type="radio" id="5" name="round-number" value="5" checked>
+                            <label for="5">5%</label>
 
-                            <input type="radio" id="5" name="round-number" value="5">
-                            <label for="5">$5</label>
+                            <input type="radio" id="10" name="round-number" value="10">
+                            <label for="10">10%</label>
+
+                            <input type="radio" id="15" name="round-number" value="15">
+                            <label for="15">15%</label>
+
+                            <input type="radio" id="20" name="round-number" value="20">
+                            <label for="20">20%</label>
+
+                            <input type="radio" id="30" name="round-number" value="30">
+                            <label for="30">30%</label>
                         </div>
-                        
-                        <select id="service">
-                            <option value="30">Outstanding - 30%</option>
-                            <option value="20">Good - 20%</option>
-                            <option value="15">Okay - 15%</option>
-                            <option value="10">Bad - 10%</option>
-                            <option value="5">Terrible - 5%</option>
-                        </select>
                     </fieldset>
                     <fieldset>
-                        <label for="split-with">How many people will you split the bill with?</label>
-                        <input type="text" value="1">
+                        <label for="split-with">Split</label>
+                        <div id="split">
+                            <span id="subtract">-</span>
+                            <span id="split-count">0</span>
+                            <span id="add">+</span>
+                        </div>
                     </fieldset>
                 </form>
             </section>

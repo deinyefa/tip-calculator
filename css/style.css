@@ -80,6 +80,15 @@ input {
     -webkit-appearance: none;
 }
 
+#split {
+    display: flex;
+}
+
+#split #split-count {
+    font-weight: bold;
+    margin: 0 15px;
+}
+
 #calculate-total {
     background-color: #eca895;
     border-radius: 10px;
@@ -90,7 +99,7 @@ input {
 #calculate-total h3 {
     margin: auto;
     font-weight: normal;
-    color: white;
+    color: whitesmoke;
 }
 
 #calculate-total .value {
