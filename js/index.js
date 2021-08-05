@@ -35,4 +35,26 @@ document.getElementById("round").onclick = function (e){
     handleTabSelection(this, "tip-round")
 }
 
-// calculate bill/tip total
+// ------------ calculate bill/tip total
+// increment / decrement split count
+function addPerson(value) {
+    // set a max of 10 guests
+    if (value < 10) return ++value;
+    return 10;
+}
+function removePerson(value) {
+    if (value <= 1) return 1;
+    return --value 
+}
+document.getElementById("subtract").onclick = function(e) {
+    e.preventDefault();
+    const valueElement = document.getElementById("split-count")
+    const value = valueElement.innerHTML.trim();
+    valueElement.innerText = removePerson(value);
+}
+document.getElementById("add").onclick = function(e) {
+    e.preventDefault();
+    const valueElement = document.getElementById("split-count")
+    let value = valueElement.innerHTML.trim();
+    valueElement.innerText = addPerson(value);
+}
