@@ -3,7 +3,6 @@ function handleTabSelection (tabElement, sectionID) {
     const tabId = tabElement.id;
     const tabs = document.getElementById("navigation").children;
 
-    console.log(tabs);
     if (!tabElement.classList.contains("active")) {
         tabElement.classList.add("active")
     }
