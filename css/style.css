@@ -11,17 +11,18 @@ a {
 }
 
 .container {
-    border: 1px solid #97b6c8;
-    border-radius: 10px;
     padding: 1em;
     margin: auto;
-    max-width: 450px;
-    /* height: 50%;
-    position: absolute; */
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+form {
+    max-width: 450px;
+    margin: 3em auto;
+    padding: 0 1em;
 }
 
 nav {
@@ -101,6 +102,7 @@ input {
     border-radius: 10px;
     padding: 1em;
     text-align: center;
+    color: whitesmoke;
 }
 
 .calculate-total h3 {
@@ -114,7 +116,7 @@ input {
     margin: 10px 0 15px;
 }
 
-#grand-total {
+.grand-total {
     font-size: 26px;
     margin-top: 10px;
 }
