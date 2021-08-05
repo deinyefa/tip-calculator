@@ -4,19 +4,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Tip Calculator</h1>
-        <nav>
-            <h2><a href="#tip-percent" id="percent">Tip by percent</a></h2>
+        <nav id="navigation">
+            <h2><a href="#tip-percent" id="percent" class="active">Tip by percent</a></h2>
             <h2><a href="#tip-round" id="round">Round bill</a></h2>
         </nav>
         <div>
             <section id="tip-percent" class="showing">
                 <fieldset>
                     <label for="total">Bill total:</label>
-                    <input id="total" type="number" name="percent-total" />
+                    <div class="">
+                        <span>$</span><input id="total" name="percent-total" />
+                    </div>
                 </fieldset>
                 <fieldset>
                     <label for="service">How was your service?</label>
@@ -30,7 +37,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="split-with">How many people will you split the bill with?</label>
-                    <input type="text">
+                    <input type="number">
                 </fieldset>
             </section>
             <section id="tip-round">
