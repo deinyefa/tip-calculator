@@ -120,7 +120,6 @@ document.getElementById("round-total").addEventListener("input", function(e) {
 let roundRadios = document.getElementsByName("round-number");
 [...roundRadios].forEach(radio => {
     radio.onclick = function() {
-        console.log("clicked one")
         if(radio.checked) {
             roundTo = radio.value;
 
