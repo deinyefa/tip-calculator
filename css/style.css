@@ -16,8 +16,8 @@ a {
     padding: 1em;
     margin: auto;
     max-width: 450px;
-    height: 50%;
-    position: absolute;
+    /* height: 50%;
+    position: absolute; */
     top: 0;
     bottom: 0;
     right: 0;
@@ -64,17 +64,50 @@ fieldset span {
     color: #eca895;
 }
 
-label {
+label, .label {
     display: block;
     color: #97b6c8;
     margin-bottom: 10px;
 }
 
 input {
+    font-size: 21px;
     color: #eca895;
     border: 0;
     border-bottom: 1px solid #97b6c8;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+#calculate-total {
+    background-color: #eca895;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+}
+
+#calculate-total h3 {
+    margin: auto;
+    font-weight: normal;
+    color: white;
+}
+
+#calculate-total .value {
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+#grand-total {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.breakdown {
+    display: flex;
+    justify-content: center;
+}
+
+.breakdown .item {
+    margin: 0 15px;
 }

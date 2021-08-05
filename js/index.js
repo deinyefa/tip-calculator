@@ -34,3 +34,5 @@ document.getElementById("round").onclick = function (e){
     e.preventDefault();
     handleTabSelection(this, "tip-round")
 }
+
+// calculate bill/tip total

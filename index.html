@@ -19,26 +19,36 @@
         </nav>
         <div>
             <section id="tip-percent" class="showing">
-                <fieldset>
-                    <label for="total">Bill total:</label>
-                    <div class="">
-                        <span>$</span><input id="total" name="percent-total" />
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <label for="service">How was your service?</label>
-                    <select id="service">
-                        <option value="30">Outstanding - 30%</option>
-                        <option value="20">Good - 20%</option>
-                        <option value="15">Okay - 15%</option>
-                        <option value="10">Bad - 10%</option>
-                        <option value="5">Terrible - 5%</option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <label for="split-with">How many people will you split the bill with?</label>
-                    <input type="number">
-                </fieldset>
+                <form id="percent-form">
+                    <fieldset>
+                        <label for="total">Bill total:</label>
+                        <div class="">
+                            <span>$</span><input id="total" name="percent-total" value="0.00" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3 for="service" class="label">How was your service?</h3>
+                        <div class="radio-buttons">
+                            <input type="radio" id="1" name="round-number" value="1" checked>
+                            <label for="1">$1</label>
+
+                            <input type="radio" id="5" name="round-number" value="5">
+                            <label for="5">$5</label>
+                        </div>
+                        
+                        <select id="service">
+                            <option value="30">Outstanding - 30%</option>
+                            <option value="20">Good - 20%</option>
+                            <option value="15">Okay - 15%</option>
+                            <option value="10">Bad - 10%</option>
+                            <option value="5">Terrible - 5%</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="split-with">How many people will you split the bill with?</label>
+                        <input type="text" value="1">
+                    </fieldset>
+                </form>
             </section>
             <section id="tip-round">
                 <fieldset>
@@ -66,9 +76,21 @@
             </section>
         </div>
         
-        <h3>
-            Your tip amount is: <span id="tip-amount"></span>
-        </h3>
+        <aside id="calculate-total">
+            <h3 class="label">Total per person</h3>
+            <p id="grand-total" class="value">$0.00</p>
+
+            <div class="breakdown">
+                <div class="item">
+                    <caption class="label">bill</caption>
+                    <p class="value" id="bill-total">$0.00</p>
+                </div>
+                <div class="item">
+                    <caption class="label">tip</caption>
+                    <p class="value" id="tip-total">$0.00</p>
+                </div>
+            </div>
+        </aside>
     </div>
 
     <script src="./js/index.js"></script>
