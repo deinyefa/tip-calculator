@@ -24,6 +24,9 @@ function handleTabSelection (tabElement, sectionID) {
             section.classList.remove("showing")
         }
     });
+
+    // Reset totals
+    calculatePercentTip(0, 0, 1)
 }
 document.getElementById("percent").onclick = function (e){
     e.preventDefault();
@@ -90,6 +93,38 @@ let percentRadios = document.getElementsByName("percent-number");
             tipPercent = radio.value;
             
             calculatePercentTip(billTotal, tipPercent, split)
+        }
+    }
+})
+let roundBill, roundTo;
+function calculateRoundTip(billTotal = 0, roundTo = 1) {
+    const ceil = Math.ceil(billTotal);
+    let remainder = ceil % roundTo;
+    let total, tip;
+    
+    if (remainder === 0) {
+        total = ceil;
+    } else {
+        total = (roundTo - remainder) + ceil
+    }
+    tip = Math.round(((total - billTotal) + Number.EPSILON) * 100) / 100;
+
+    document.getElementById("round-grand-total").innerText = `$${total}.00`
+    document.getElementById("round-bill-total").innerText = `$${billTotal}`
+    document.getElementById("round-tip-total").innerText = `$${tip}`
+}
+document.getElementById("round-total").addEventListener("input", function(e) {
+    roundBill = e.target.value.trim();
+    calculateRoundTip(roundBill, roundTo)
+});
+let roundRadios = document.getElementsByName("round-number");
+[...roundRadios].forEach(radio => {
+    radio.onclick = function() {
+        console.log("clicked one")
+        if(radio.checked) {
+            roundTo = radio.value;
+
+            calculateRoundTip(roundBill, roundTo)
         }
     }
 })

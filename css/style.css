@@ -11,7 +11,7 @@ a {
 }
 
 .container {
-    border: 1px solid;
+    border: 1px solid #97b6c8;
     border-radius: 10px;
     padding: 1em;
     margin: auto;
@@ -34,6 +34,7 @@ nav h2 {
     border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
+    font-weight: normal;
 }
 
 nav h2 a {
@@ -95,20 +96,20 @@ input {
     align-self: center;
 }
 
-#calculate-total {
+.calculate-total {
     background-color: #eca895;
     border-radius: 10px;
     padding: 1em;
     text-align: center;
 }
 
-#calculate-total h3 {
+.calculate-total h3 {
     margin: auto;
     font-weight: normal;
     color: whitesmoke;
 }
 
-#calculate-total .value {
+.calculate-total .value {
     font-weight: bold;
     margin: 10px 0 15px;
 }
