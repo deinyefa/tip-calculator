@@ -23,7 +23,7 @@
                 <form id="percent-form">
                     <fieldset>
                         <label for="total">Bill total:</label>
-                        <div class="">
+                        <div>
                             <span>$</span><input id="total" name="percent-total" placeholder="0.00" />
                         </div>
                     </fieldset>
@@ -59,24 +59,24 @@
             <section id="tip-round">
                 <fieldset>
                     <label for="round-total">Bill total:</label>
-                    <input type="number" name="round total" id="round-total">
+                    <div>
+                        <span>$</span><input id="round-total" class="total" name="percent-total" placeholder="0.00" />
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <h3>Round your bill to</h3>
-                    <div>
+                    <label class="label">Round to</label>
+                    <div class="radio-buttons">
                         <input type="radio" id="1" name="round-number" value="1" checked>
                         <label for="1">$1</label>
-                    </div>
-                    <div>
+
                         <input type="radio" id="5" name="round-number" value="5">
                         <label for="5">$5</label>
-                    </div>
-                    <div>
+
                         <input type="radio" id="10" name="round-number" value="10">
                         <label for="10">$10</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="custom" name="round-number" value="">Custom value <input type="text" name="custom-value" />
+
+                        <br/>
+                        <input type="radio" id="custom" name="round-number" value="">Custom tip <input type="text" name="custom-value" />
                     </div>
                 </fieldset>
             </section>

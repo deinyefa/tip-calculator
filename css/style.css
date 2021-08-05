@@ -47,6 +47,11 @@ nav h2 a.active {
     color: #fff;
 }
 
+nav a:hover, nav a:focus {
+    background-color: #eca895c5;
+    color: #fff;
+}
+
 section {
     display: none;
 }
@@ -87,6 +92,7 @@ input {
 #split #split-count {
     font-weight: bold;
     margin: 0 15px;
+    align-self: center;
 }
 
 #calculate-total {
